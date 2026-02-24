@@ -17,6 +17,7 @@ pub const Extension = enum {
     KHR_debug,
     //
     EXT_copy_texture,
+    ARB_bindless_texture,
     //
     NV_bindless_texture,
     NV_shader_buffer_load,
@@ -1090,6 +1091,24 @@ pub fn loadExtension(loader: LoaderFn, extension: Extension) void {
             load("glCopyTexSubImage1DEXT", .{ &bindings.copyTexSubImage1DEXT, &bindings.copyTexSubImage1D });
             load("glCopyTexSubImage2DEXT", .{ &bindings.copyTexSubImage2DEXT, &bindings.copyTexSubImage2D });
             load("glCopyTexSubImage3DEXT", .{ &bindings.copyTexSubImage3DEXT, &bindings.copyTexSubImage3D });
+        },
+        .ARB_bindless_texture => {
+            load("glGetTextureHandleARB", .{&bindings.getTextureHandleARB});
+            load("glGetTextureSamplerHandleARB", .{&bindings.getTextureSamplerHandleARB});
+            load("glMakeTextureHandleResidentARB", .{&bindings.makeTextureHandleResidentARB});
+            load("glMakeTextureHandleNonResidentARB", .{&bindings.makeTextureHandleNonResidentARB});
+            load("glGetImageHandleARB", .{&bindings.getImageHandleARB});
+            load("glMakeImageHandleResidentARB", .{&bindings.makeImageHandleResidentARB});
+            load("glMakeImageHandleNonResidentARB", .{&bindings.makeImageHandleNonResidentARB});
+            load("glUniformHandleui64ARB", .{&bindings.uniformHandleui64ARB});
+            load("glUniformHandleui64vARB", .{&bindings.uniformHandleui64vARB});
+            load("glProgramUniformHandleui64ARB", .{&bindings.programUniformHandleui64ARB});
+            load("glProgramUniformHandleui64vARB", .{&bindings.programUniformHandleui64vARB});
+            load("glIsTextureHandleResidentARB", .{&bindings.isTextureHandleResidentARB});
+            load("glIsImageHandleResidentARB", .{&bindings.isImageHandleResidentARB});
+            load("glVertexAttribL1ui64ARB", .{&bindings.vertexAttribL1ui64ARB});
+            load("glVertexAttribL1ui64vARB", .{&bindings.vertexAttribL1ui64vARB});
+            load("glGetVertexAttribLui64vARB", .{&bindings.getVertexAttribLui64vARB});
         },
         // NV extensions /////////////////////////////////////////////////////////////////////////////////////
         .NV_bindless_texture => {

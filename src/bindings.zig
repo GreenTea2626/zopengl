@@ -4357,6 +4357,89 @@ pub var copyTexSubImage3DEXT: *const fn (
     width: Sizei,
     height: Sizei,
 ) callconv(.c) void = undefined;
+
+pub var getTextureHandleARB: *const fn (
+    texture: Uint,
+) callconv(.c) u64 = undefined;
+
+pub var getTextureSamplerHandleARB: *const fn (
+    texture: Uint,
+    sampler: Uint,
+) callconv(.c) u64 = undefined;
+
+pub var makeTextureHandleResidentARB: *const fn (
+    handle: u64,
+) callconv(.c) void = undefined;
+
+pub var makeTextureHandleNonResidentARB: *const fn (
+    handle: u64,
+) callconv(.c) void = undefined;
+
+pub var getImageHandleARB: *const fn (
+    texture: Uint,
+    level: Int,
+    layered: Boolean,
+    layer: Int,
+    format: Enum,
+) callconv(.c) u64 = undefined;
+
+pub var makeImageHandleResidentARB: *const fn (
+    handle: u64,
+    access: Enum,
+) callconv(.c) void = undefined;
+
+pub var makeImageHandleNonResidentARB: *const fn (
+    handle: u64,
+) callconv(.c) void = undefined;
+
+pub var uniformHandleui64ARB: *const fn (
+    location: Int,
+    value: u64,
+) callconv(.c) void = undefined;
+
+pub var uniformHandleui64vARB: *const fn (
+    location: Int,
+    count: Sizei,
+    value: [*c]const u64,
+) callconv(.c) void = undefined;
+
+pub var programUniformHandleui64ARB: *const fn (
+    program: Uint,
+    location: Int,
+    value: u64,
+) callconv(.c) void = undefined;
+
+pub var programUniformHandleui64vARB: *const fn (
+    program: Uint,
+    location: Int,
+    count: Sizei,
+    values: [*c]const u64,
+) callconv(.c) void = undefined;
+
+pub var isTextureHandleResidentARB: *const fn (
+    handle: u64,
+) callconv(.c) Boolean = undefined;
+
+pub var isImageHandleResidentARB: *const fn (
+    handle: u64,
+) callconv(.c) Boolean = undefined;
+
+pub var vertexAttribL1ui64ARB: *const fn (
+    index: Uint,
+    x: u64,
+) callconv(.c) void = undefined;
+
+pub var vertexAttribL1ui64vARB: *const fn (
+    index: Uint,
+    v: [*c]const u64,
+) callconv(.c) void = undefined;
+
+pub var getVertexAttribLui64vARB: *const fn (
+    index: Uint,
+    pname: Enum,
+    params: [*c]u64,
+) callconv(.c) void = undefined;
+
 //--------------------------------------------------------------------------------------------------
 //
 // NV_bindless_texture
