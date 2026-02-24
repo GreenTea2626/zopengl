@@ -2103,4 +2103,25 @@ comptime {
     @export(&bindings.multiDrawElementsIndirectCount, .{ .name = "glMultiDrawElementsIndirectCount", .linkage = linkage });
     @export(&bindings.polygonOffsetClamp, .{ .name = "glPolygonOffsetClamp", .linkage = linkage });
     @export(&bindings.specializeShader, .{ .name = "glSpecializeShader", .linkage = linkage });
+
+    // Extensions
+    @export(&bindings.getTextureHandleARB, .{ .name = "glGetTextureHandleARB", .linkage = linkage });
+    @export(&bindings.getTextureSamplerHandleARB, .{ .name = "glGetTextureSamplerHandleARB", .linkage = linkage });
+    @export(&bindings.makeTextureHandleResidentARB, .{ .name = "glMakeTextureHandleResidentARB", .linkage = linkage });
+    @export(&bindings.makeTextureHandleNonResidentARB, .{ .name = "glMakeTextureHandleNonResidentARB", .linkage = linkage });
+    @export(&bindings.getImageHandleARB, .{ .name = "glGetImageHandleARB", .linkage = linkage });
+    @export(&bindings.makeImageHandleResidentARB, .{ .name = "glMakeImageHandleResidentARB", .linkage = linkage });
+    @export(&bindings.makeImageHandleNonResidentARB, .{ .name = "glMakeImageHandleNonResidentARB", .linkage = linkage });
+    @export(&bindings.uniformHandleui64ARB, .{ .name = "glUniformHandleui64ARB", .linkage = linkage });
+    @export(&bindings.uniformHandleui64vARB, .{ .name = "glUniformHandleui64vARB", .linkage = linkage });
+    @export(&bindings.programUniformHandleui64ARB, .{ .name = "glProgramUniformHandleui64ARB", .linkage = linkage });
+    @export(&bindings.programUniformHandleui64vARB, .{ .name = "glProgramUniformHandleui64vARB", .linkage = linkage });
+    @export(&bindings.isTextureHandleResidentARB, .{ .name = "glIsTextureHandleResidentARB", .linkage = linkage });
+    @export(&bindings.isImageHandleResidentARB, .{ .name = "glIsImageHandleResidentARB", .linkage = linkage });
+    @export(&bindings.vertexAttribL1ui64ARB, .{ .name = "glVertexAttribL1ui64ARB", .linkage = linkage });
+    @export(&bindings.vertexAttribL1ui64vARB, .{ .name = "glVertexAttribL1ui64vARB", .linkage = linkage });
+    @export(&bindings.getVertexAttribLui64vARB, .{ .name = "glGetVertexAttribLui64vARB", .linkage = linkage });
+    @export(&bindings.getTextureHandleNV, .{ .name = "glGetTextureHandleNV", .linkage = linkage });
+    @export(&bindings.makeTextureHandleResidentNV, .{ .name = "glMakeTextureHandleResidentNV", .linkage = linkage });
+    @export(&bindings.programUniformHandleui64NV, .{ .name = "glProgramUniformHandleui64NV", .linkage = linkage });
 }
